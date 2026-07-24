@@ -8,6 +8,7 @@ import (
 	"net/url"
 	"os"
 	"path/filepath"
+	"seanime/internal/server"
 
 	"github.com/spf13/viper"
 )
