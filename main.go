@@ -68,7 +68,6 @@ func main() {
 		log.Printf("Proxy listening on http://127.0.0.1:43211 -> %s", target)
 		log.Fatal(server.ListenAndServe())
 	} else {
-		// server.StartServer(WebFS, embeddedLogo)
-		log.Println("Starting server with embedded web assets...")
+		server.StartServer(WebFS, embeddedLogo)
 	}
 }

@@ -910,7 +910,7 @@ function MpvCorePlayerContent(props: MpvCorePlayerContentProps) {
         setFrameDrops({})
         setCacheState(null)
 
-        log.info("Loading new video source: Playback ID =", info.id, "Playback URI =", info.playbackUri, "Token =", token);
+        log.info("Loading new video source: Playback ID =", info.id, "Playback URI =", info.playbackUri, "Token =", token, "Stream URL =", info.streamUrl);
 
         (async () => {
             try {
@@ -921,7 +921,7 @@ function MpvCorePlayerContent(props: MpvCorePlayerContentProps) {
                 if (token !== sessionTokenRef.current) return
                 suppressEndRef.current = false
                 endedRef.current = false
-                await player.load(mc_resolveSource(info.playbackUri))
+                await player.load(mc_resolveSource(info.streamUrl))
                 if (token !== sessionTokenRef.current) return
                 log.info("Video file loaded. Initializing player properties...")
                 sendEvent("playback-loaded", { id: info.id, clientId })
