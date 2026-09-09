@@ -1,6 +1,3 @@
-> [!WARNING]
-> The video might not start when using the mpvcore player. Ending the stream and replaying should work.
-
 This is a fork of [Seanime](https://github.com/5rahim/seanime) that adds support for using a custom server URL instead of the local server hosted by Denshi.
 
 This feature is described in [this issue](https://github.com/5rahim/seanime/issues/854).
